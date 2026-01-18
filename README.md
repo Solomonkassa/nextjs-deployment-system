@@ -90,3 +90,31 @@ chmod +x setup.sh && ./setup.sh
 
 # Start in development mode
 ./deploy-ui.sh
+
+nextjs-deployment-system/
+├── deploy.sh                    # Main deployment script
+├── deploy-ui.sh                 # Interactive UI script
+├── docker/
+│   ├── Dockerfile              # Production Dockerfile
+│   ├── Dockerfile.dev          # Development Dockerfile
+│   └── docker-compose.yml      # Multi-service setup
+├── scripts/
+│   ├── health-check.sh         # Health monitoring
+│   ├── backup.sh              # Backup utilities
+│   └── monitoring.sh          # Performance monitoring
+├── github/
+│   ├── workflows/
+│   │   ├── ci-cd.yml          # GitHub Actions CI/CD
+│   │   └── security-scan.yml  # Security scanning
+│   └── PULL_REQUEST_TEMPLATE.md
+├── docs/
+│   ├── DEPLOYMENT.md          # Deployment guide
+│   ├── TROUBLESHOOTING.md     # Troubleshooting guide
+│   └── API_INTEGRATION.md     # API documentation
+├── config/
+│   ├── nginx/
+│   │   └── nginx.conf         # Production nginx config
+│   └── environment/
+│       ├── .env.production    # Production env
+│       └── .env.staging       # Staging env
+└── README.md                   # Main documentation
